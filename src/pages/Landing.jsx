@@ -5,10 +5,8 @@ import {useEffect} from 'react'
 export default function Landing(){
     const navigate = useNavigate()
     useEffect(()=>{
-        setTimeout(()=>{
-            navigate('/home')
-        },1500)
-    })
+        navigate('/home')
+    },[])
     return(
        <div className='bg-gray-950 w-screen overflow-x-hidden min-h-screen h-auto flex flex-col items-center pt-20'>
         <Player

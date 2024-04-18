@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stellar View</title>
     <style>
-      /* Hide scrollbar for all elements */
-      ::-webkit-scrollbar {
-        display: none;
+    /* Additional custom CSS */
+    html, body {
+      overflow-x: hidden;
+      overflow-y:auto
+    }
+    ::-webkit-scrollbar {
+        display:none; /* Hide the scrollbar */
       }
-      /* Optional: Ensure scrollbar is hidden on Firefox */
-      * {
-        scrollbar-width: none;
-      }
-      /* Optional: Ensure overflow is hidden on Firefox */
-      html {
-        overflow-y: scroll;
-        overflow-x: hidden;
-      }
-    </style>
+  </style>
   </head>
   <body>
     <div id="root"></div>
