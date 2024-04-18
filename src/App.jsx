@@ -9,13 +9,13 @@ const router = createBrowserRouter([
     index:true,
     id:'index'
   },{
-    path:'home',
+    path:'/home',
     element:<Home></Home>,
     loader:homeLoader,
     id:'home'
   },
   {
-    path:'details/:code',
+    path:'/details/:code',
     element:<Details></Details>,
     loader:detailsLoader,
     id:'details'
