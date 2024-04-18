@@ -2,9 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stellar View</title>
+    <style>
+      /* Hide scrollbar for all elements */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      /* Optional: Ensure scrollbar is hidden on Firefox */
+      * {
+        scrollbar-width: none;
+      }
+      /* Optional: Ensure overflow is hidden on Firefox */
+      html {
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
