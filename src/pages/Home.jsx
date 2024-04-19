@@ -3,14 +3,13 @@ import Logo from '../assets/icon.png'
 import {Player} from '@lottiefiles/react-lottie-player'
 import LoaderJSON from '../assets/Lottie/solar loader.json'
 import ErrorJSON from '../assets/Lottie/error.json'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData,useNavigate } from 'react-router-dom'
 import React,{useEffect,useState,Suspense} from 'react'
 const CarouselComp = React.lazy(() => import('../components/Carousel'))
 const Planets = React.lazy(() => import('../components/Planets'))
-import EarthJSON from '../assets/Lottie/earth.json'
-import WeatherJSON from '../assets/Lottie/mars weather.json'
 import RoverJSON from '../assets/Lottie/mars rover.json'
 export default function Home(){
+    const navigate = useNavigate()
     const [data,setData] = useState({})
     const [comp,setComp] = useState(1)
     const [message,setMessage] = useState("")
@@ -52,29 +51,9 @@ export default function Home(){
                 <div className='w-screen mt-4 mx-0 px-0 flex flex-col items-center justify-center overflow-x-hidden'>
                     <CarouselComp images={data}></CarouselComp>
                     <section className="flex flex-row flex-wrap items-center justify-center gap-10">
-                        <div>
-                        <Player
-            src={EarthJSON}
-            loop
-            autoplay
-            speed={2}
-            style={{ height: "200px", width: "200px" }}
-          />
-           <h3 className='text-white font-sans font-normal text-center'>Earth</h3>
-                        </div>
                         
-                        <div>
-                        <Player
-            src={WeatherJSON}
-            loop
-            autoplay
-            speed={2}
-            style={{ height: "200px", width: "200px" }}
-          />
-           <h3 className='text-white font-sans font-normal text-center'>Mars Weather</h3>
-                        </div>
                         
-                        <div>
+                        <div className='cursor-pointer' onClick={()=>{navigate('/rover')}}>
                         <Player
             src={RoverJSON}
             loop

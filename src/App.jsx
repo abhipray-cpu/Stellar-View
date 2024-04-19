@@ -2,6 +2,7 @@ import {RouterProvider,createBrowserRouter} from "react-router-dom"
 import Landing from './pages/Landing'
 import Home,{loader as homeLoader} from './pages/Home'
 import Details,{loader as detailsLoader} from './pages/Detail' 
+import Rover,{loader as roverLoader} from './pages/Rover'
 const router = createBrowserRouter([
   {
     path:'/',
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
     element:<Details></Details>,
     loader:detailsLoader,
     id:'details'
+  },{
+    path:'/rover',
+    element:<Rover></Rover>,
+    loader:roverLoader,
+    id:'rover'
   }
 ])
 
